@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.yaml:snakeyaml:1.20-SNAPSHOT'
+    implementation 'org.yaml:snakeyaml:1.25-SNAPSHOT'
 
     for (lib in ['asm', 'asm-tree', 'asm-commons', 'asm-util']) {
         implementation group: 'org.ow2.asm', name: lib, version: '7.2'
