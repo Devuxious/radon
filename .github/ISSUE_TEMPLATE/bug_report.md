@@ -7,21 +7,17 @@ assignees: ''
 
 ---
 
-**Description of Bug:** Describe what went wrong.
+**Description of Bug:**
 
-**Expected behavior:** Describe what should have happened instead.
+**Expected behavior:**
 
-**Radon version:** Provide the Radon version used. (Saying "latest" or similar)
-will result in an instant close.
+**Git commit hash:**
 
 **Configuration:** Provide the ___***FULL***___ configuration used to produce
-the error. If privacy is desired, the configuration can be privately DM'd to
+the error. Do not blank *any part of theIf privacy is desired, the configuration can be privately DM'd to
 ItzSomebody#9663 on Discord.
 
 **Relevant errors:** Put the stacktraces and errors in (separate) code blocks.
-
-**Screenshots:** Please (relevant and helpful) screenshots as they may give
-context as to how something might have happened.
 
 **Reproduction steps:**
 1. Do something.

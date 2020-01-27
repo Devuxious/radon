@@ -3,26 +3,26 @@ plugins {
     id 'java'
 }
 
-group 'me.itzsomebody'
-version '2.0.0-SNAPSHOT'
+group 'xyz.itzsomebody'
+version '3.0.0-SNAPSHOT'
 
-defaultTasks 'clean', 'shadowJar'
-sourceCompatibility = 1.8
-def main = 'me.itzsomebody.radon.Main'
+defaultTasks 'clean', 'testClasses', 'shadowJar'
+sourceCompatibility = 11
+
+def main = 'xyz.itzsomebody.radon.Main'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-jar {
-    manifest { attributes 'Main-Class': main }
-}
-
 shadowJar() {
-    classifier = null
+    archiveClassifier.set(null)
 
-    relocate 'org.objectweb.asm', 'me.itzsomebody.radon.asm.lib'
+    // Relocate lib classes
+    relocate 'org.objectweb.asm', 'xyz.itzsomebody.radon.lib.org.objectweb.asm'
+    relocate 'org.yaml.snakeyaml', 'xyz.itzsomebody.radon.lib.org.yaml.snakeyaml'
     exclude 'module-info.class'
+
     manifest { attributes 'Main-Class': main }
 }
 
@@ -32,13 +32,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.ow2.asm:asm:7.1'
-    implementation 'org.ow2.asm:asm-tree:7.1'
-    implementation 'org.ow2.asm:asm-commons:7.1'
-    implementation 'org.ow2.asm:asm-util:7.1'
     implementation 'org.yaml:snakeyaml:1.20-SNAPSHOT'
 
+    for (lib in ['asm', 'asm-tree', 'asm-commons', 'asm-util']) {
+        implementation group: 'org.ow2.asm', name: lib, version: '7.2'
+    }
+
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.powermock:powermock-api-mockito:1.6.6'
-    testImplementation 'org.powermock:powermock-module-junit4:1.6.6'
 }
