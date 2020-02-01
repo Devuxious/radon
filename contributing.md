@@ -34,18 +34,18 @@ When opening a bug report, please make sure to follow the below:
     * Example of a **bad** title: "Adding an exclusions causes bug"
     * Example of a **bad** title: "Radon bug"
 * **Be as specific and descriptive as possible when describing the issue**. It really annoys me and other people when
-your description is vague. I should be able to understand exactly what the issue is with no questions asked.
+your description is vague. We should be able to understand exactly what the issue is with no questions asked.
 * **Be as detailed as you can when describing the expected behavior.** Same reason as above.
 * **Provide the git commit hash you build Radon from.** This allows me or anyone investigating the bug to instantly find
 the version of Radon you are using. Saying "latest" or similar will result in an instant close of your issue with no
 help provided.
-* **Provide the exact configuration used in code blocks**. This means no blanking out lines and no screenshots. I
+* **Provide the exact configuration used in code blocks**. This means no blanking out lines and no screenshots. We
 apologize in advance if privacy is desired, but issues that could have been solved in 5 seconds have lasted multiple
 hours because people hid parts of their configuration from me.
 * **Provide the relevant errors and exceptions in code blocks.** Please do not put screenshots here and make sure to put
 each error in its own code block. Also, please make sure you specify when the error happens.
 * **Be as specific and detailed as possible when doing reproduction steps**. This is where some of the worst
-miscommunications have happened which resulted in a ton of wasted time. Please just put in a little effort so that I
+miscommunications have happened which resulted in a ton of wasted time. Please just put in a little effort so that we
 know *exactly* what you did.
 * **Attach / link what you attempted to obfuscate**. This is a mandatory for all software problems created by the
 obfuscation. If you are unable to attach or link the software you obfuscated, attach a proof-of-concept JAR which also
@@ -60,7 +60,7 @@ All enhancements and feature requests are tracked as GitHub issues for organizat
 When opening an enhancement / feature request, please make sure to follow the below:
 * **Use a clear and descriptive title**. Please also prefix the title with [Enhancement/FR] so there's no room for
 confusion.
-    * Example of a **good** title: "[Enhancement] Use dynamic string encryption decryptors instead of static ones"
+    * Example of a **good** title: "[Enhancement] Use dynamic string decrypters instead of static ones"
     * Example of a **good** title: "[Feature Request] Transformer to flatten the CFG"
     * Example of a **bad** title: "suggestion"
     * Example of a **bad** title: "thing to make radon better"
@@ -77,6 +77,7 @@ Pull requests should fulfill one of the following:
 The rules for guidelines are pretty simple:
 * Follow the styleguides.
 * Fix your commits should status checks fail.
+* If the PR adds features / code, make sure you also appropriately document said additions.
 * Squash commits.
 
 ## Styleguides
@@ -87,6 +88,10 @@ The rules for guidelines are pretty simple:
 
 #### Java Styleguides
 All Java code should adhere to the [Google Java styleguide](https://google.github.io/styleguide/javaguide.html).
+
+#### Markdown Styleguides
+* All markdown files are required to hard-wrapped at 120 characters. The only exceptions to this are extremely long URLs
+and code snippets.
 
 #### Transformer Documentation
 TODO
