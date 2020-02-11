@@ -5,43 +5,17 @@ various parts of research put into Radon's internals and transformers.
 
 * [Exclusions](exclusions.md)
 * Transformers
-    * String encrypters
-        * XOR encrypter
-        * Base64 encrypter
-        * Dynamic encrypter
-        * Long Array encoder
-        * String pooler
-        * Complex encrypter
-        * Anti-emulation encrypter
-    * Flow obfuscators
-        * Block splitter
-        * CFG flattener
-        * Dead branch injector
-        * Dead switch injector
-        * Dead trap injector
-        * Null check mutilator  
-        * Stack rearranger
-    * Number obfuscators
-        * Arithmetic obfuscator
-        * Bitwise obfuscator
-        * Casting obfuscator
-        * Context obfuscator
-        * Number pooler
-    * Reference obfuscator
-        * Invocation proxy obfuscator
-        * Invokedynamic obfuscator
-        * Reflection obfuscator
-    * Watermarker
-        * Todo
-    * Virtualizer
-        * Simple VM
+    * [String encrypters](transformers/string_encryption.md)
+        * TODO
+    * [Flow obfuscators](transformers/flow_obfuscation.md)
+        * TODO
+    * [Number obfuscators](transformers/number_obfuscation.md)
+        * TODO
+    * [Reference obfuscators](transformers/reference_obfuscation.md)
+        * TODO
+    * [Watermarkers](transformers/watermarker.md)
+        * TODO
+    * [Virtualizers](transformers/virtualizer.md)
         * TODO
     * Misc.
-        * Anti-debugger injector
-        * Anti-memory-dump injector
-        * Anti-tamper injector
-        * Name obfuscator
-        * Expiration injector
-        * Member shuffler
-        * Packer
-        * Shrinker
+        * TODO

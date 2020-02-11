@@ -52,7 +52,7 @@ obfuscation. If you are unable to attach or link the software you obfuscated, at
 causes the same issue to happen. If possible, please also provide the obfuscated output.
 
 Extra: [this video](https://www.youtube.com/watch?v=53zkBvL4ZB4&vl=en) by
-[LiveOverflow](https://github.com/LiveOverflow) is a good reference for asking question well.
+[LiveOverflow](https://github.com/LiveOverflow) is a good reference for asking a question well.
 
 #### Submitting an Issue Report as an Enhancement / Feature Request
 All enhancements and feature requests are tracked as GitHub issues for organizational purposes.
@@ -72,6 +72,9 @@ Pull requests should fulfill one of the following:
 * Spelling / grammatical errors in documentation, Javadocs, or markdown files.
 * Fix issues reported on the issue tracker.
 * Implement an enhancement / feature request on the issue tracker.
+    * If a transformer is implemented, it needs to be added as an enum field to
+        1. `xyz.itzsomebody.radon.transformers.Transformers` and
+        2. Be documented accordingly.
 * Update code or documentation to adhere to the specified styleguides.
 
 The rules for guidelines are pretty simple:
@@ -87,11 +90,22 @@ The rules for guidelines are pretty simple:
 * Commit messages should somewhat adhere to [ConventionalCommits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 #### Java Styleguides
-All Java code should adhere to the [Google Java styleguide](https://google.github.io/styleguide/javaguide.html).
+All Java code should adhere to the [Google Java styleguide](https://google.github.io/styleguide/javaguide.html) with the
+exception of the column limit. Lines should not go past 120 characters.
 
 #### Markdown Styleguides
 * All markdown files are required to hard-wrapped at 120 characters. The only exceptions to this are extremely long URLs
 and code snippets.
 
 #### Transformer Documentation
-TODO
+All docs are required to:
+* Start with the transformer name as level-1 heading.
+    * e.g. `# Bitwise Number Expander`
+* Include a brief overview.
+    * e.g. `Expands integer and long constants into bitwise expressions which evaluate to the original number.`
+* Include a detailed explanation of the algorithm implemented and all known edge cases.
+* Include a detailed explanation of any instances where the transformation will break the program.
+* Include information about any kind of overhead whether it be performance or file size.
+* Include (relevant) before and after examples as a fenced code block.
+* Use proper American/British English.
+* Be proofread and be free of any spelling or grammatical errors.
